@@ -11,7 +11,7 @@
 //  import "database/sql"
 //  import _ "github.com/go-sql-driver/mysql"
 //
-//  db, err := sql.Open("mysql", "user:password@/dbname")
+//  db, err := sql.Open("tdsql", "user:password@/dbname")
 //
 // See https://github.com/go-sql-driver/mysql#usage for details
 package tdsql

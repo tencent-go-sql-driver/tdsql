@@ -16,7 +16,7 @@ import (
 )
 
 func Fuzz(data []byte) int {
-	db, err := sql.Open("mysql", string(data))
+	db, err := sql.Open("tdsql", string(data))
 	if err != nil {
 		return 0
 	}

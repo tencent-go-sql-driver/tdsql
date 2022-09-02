@@ -53,7 +53,7 @@ var (
 //      RootCAs: rootCertPool,
 //      Certificates: clientCert,
 //  })
-//  db, err := sql.Open("mysql", "user@tcp(localhost:3306)/test?tls=custom")
+//  db, err := sql.Open("tdsql", "user@tcp(localhost:3306)/test?tls=custom")
 //
 func RegisterTLSConfig(key string, config *tls.Config) error {
 	if _, isBool := readBool(key); isBool || strings.ToLower(key) == "skip-verify" || strings.ToLower(key) == "preferred" {
