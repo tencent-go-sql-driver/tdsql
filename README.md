@@ -1,4 +1,4 @@
-# Go-MySQL-Driver
+# Go-TDSQL-Driver
 
 A TDSQL-Driver for Go's [database/sql](https://golang.org/pkg/database/sql/) package
 
@@ -25,7 +25,6 @@ A TDSQL-Driver for Go's [database/sql](https://golang.org/pkg/database/sql/) pac
 ---------------------------------------
 
 ## Features
-  * Lightweight and [fast](https://github.com/go-sql-driver/sql-benchmark "golang MySQL-Driver performance")
   * Native Go implementation. No C-bindings, just pure Go
   * Connections over TCP/IPv4, TCP/IPv6, Unix domain sockets or [custom protocols](https://godoc.org/github.com/go-sql-driver/mysql#DialFunc)
   * Automatic handling of broken connections
@@ -39,14 +38,13 @@ A TDSQL-Driver for Go's [database/sql](https://golang.org/pkg/database/sql/) pac
 
 ## Requirements
   * Go 1.10 or higher. We aim to support the 3 latest versions of Go.
-  * MySQL (4.1+), MariaDB, Percona Server, Google CloudSQL or Sphinx (2.2.3+)
 
 ---------------------------------------
 
 ## Installation
 Simple install the package to your [$GOPATH](https://github.com/golang/go/wiki/GOPATH "GOPATH") with the [go tool](https://golang.org/cmd/go/ "go command") from shell:
 ```bash
-$ go get -u github.com/go-sql-driver/mysql
+$ go get -u github.com/tencent-go-sql-driver/tdsql
 ```
 Make sure [Git is installed](https://git-scm.com/downloads) on your machine and in your system's `PATH`.
 
@@ -60,12 +58,12 @@ import (
 	"database/sql"
 	"time"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/tencent-go-sql-driver/tdsql"
 )
 
 // ...
 
-db, err := sql.Open("mysql", "user:password@/dbname")
+db, err := sql.Open("tdsql", "user:password@/dbname")
 if err != nil {
 	panic(err)
 }

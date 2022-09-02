@@ -1,6 +1,6 @@
 // Go TDSQL Driver - A TDSQL-Driver for Go's database/sql package
 //
-// Copyright 2014 The Go-MySQL-Driver Authors. All rights reserved.
+// Copyright 2014 The Go-tdsql-Driver Authors. All rights reserved.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -12,13 +12,13 @@ const defaultCollation = "utf8mb4_general_ci"
 const binaryCollation = "binary"
 
 // A list of available collations mapped to the internal ID.
-// To update this map use the following MySQL query:
+// To update this map use the following tdsql query:
 //     SELECT COLLATION_NAME, ID FROM information_schema.COLLATIONS WHERE ID<256 ORDER BY ID
 //
 // Handshake packet have only 1 byte for collation_id.  So we can't use collations with ID > 255.
 //
 // ucs2, utf16, and utf32 can't be used for connection charset.
-// https://dev.mysql.com/doc/refman/5.7/en/charset-connection.html#charset-connection-impermissible-client-charset
+// https://dev.tdsql.com/doc/refman/5.7/en/charset-connection.html#charset-connection-impermissible-client-charset
 // They are commented out to reduce this map.
 var collations = map[string]byte{
 	"big5_chinese_ci":      1,
@@ -167,7 +167,7 @@ var collations = map[string]byte{
 	//"ucs2_croatian_ci":         149,
 	//"ucs2_unicode_520_ci":      150,
 	//"ucs2_vietnamese_ci":       151,
-	//"ucs2_general_mysql500_ci": 159,
+	//"ucs2_general_tdsql500_ci": 159,
 	//"utf32_unicode_ci":         160,
 	//"utf32_icelandic_ci":       161,
 	//"utf32_latvian_ci":         162,

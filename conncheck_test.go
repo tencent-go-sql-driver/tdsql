@@ -1,6 +1,6 @@
 // Go TDSQL Driver - A TDSQL-Driver for Go's database/sql package
 //
-// Copyright 2013 The Go-MySQL-Driver Authors. All rights reserved.
+// Copyright 2013 The Go-tdsql-Driver Authors. All rights reserved.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -24,7 +24,7 @@ func TestStaleConnectionChecks(t *testing.T) {
 			dbt.Fatal(err)
 		}
 
-		// wait for MySQL to close our connection
+		// wait for tdsql to close our connection
 		time.Sleep(3 * time.Second)
 
 		tx, err := dbt.db.Begin()
