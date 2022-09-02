@@ -73,7 +73,7 @@ db.SetMaxOpenConns(10)
 db.SetMaxIdleConns(10)
 ```
 
-[Examples are available in our Wiki](https://github.com/go-sql-driver/mysql/wiki/Examples "Go-MySQL-Driver Examples").
+[Examples like mysql](https://github.com/go-sql-driver/mysql/wiki/Examples "Go-MySQL-Driver Examples").
 
 ### Important settings
 
